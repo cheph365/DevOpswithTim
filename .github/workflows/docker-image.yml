@@ -13,12 +13,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --tag newebapp
+      run: docker build . --tag gcr.io/graphic-fiber-394421/newebapp
    
     - name: Login to Google Cloud
       uses: 'google-github-actions/auth@v1'
       with:
         credentials_json: '${{ secrets.GCP_SA }}'
+
+    - name: Push to GCR
+      run: docker push gcr.io/graphic-fiber-394421/newebapp
 
     - name: Deploy to CloudRun
       run: |
