@@ -21,7 +21,7 @@ jobs:
         credentials_json: '${{ secrets.GCP_SA }}'
 
     - name: Push to GCR
-      run: docker push gcr.io/graphic-fiber-394421/newebapp
+      run: gcloud auth configure-docker && docker push gcr.io/graphic-fiber-394421/newebapp
 
     - name: Deploy to CloudRun
       run: |
