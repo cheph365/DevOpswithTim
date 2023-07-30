@@ -25,4 +25,4 @@ jobs:
 
     - name: Deploy to CloudRun
       run: |
-        gcloud run deploy cheph365/newebapp --region europe-west1 --image cheph365/newebapp --platform managed --allow-unauthenticated --project graphic-fiber-394421
+        gcloud run deploy newebapp --region europe-west1 --image cheph365/newebapp --platform managed --allow-unauthenticated --project graphic-fiber-394421
