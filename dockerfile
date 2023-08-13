@@ -14,4 +14,4 @@ COPY . .
 EXPOSE 8081
 
 # Command to start your Node.js app
-CMD ["http-server", "-p", "8081"]
+CMD ["http-server", "-p", "8080"]
