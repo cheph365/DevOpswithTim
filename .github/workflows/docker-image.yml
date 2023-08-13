@@ -18,7 +18,7 @@ jobs:
     - name: Login to Google Cloud
       uses: 'google-github-actions/auth@v1'
       with:
-        credentials_json: '${{ secrets.GCP_SA }}'
+        credentials_json: 
 
     - name: Push to Google container cloud
       run: gcloud auth configure-docker && docker push gcr.io/graphic-fiber-394421/newebapp
