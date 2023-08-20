@@ -11,7 +11,7 @@ RUN npm install -g http-server
 COPY . .
 
 # Expose the port on which your Node.js app will run (adjust this if your app uses a different port)
-EXPOSE 8081
+EXPOSE 8080
 
 # Command to start your Node.js app
 CMD ["http-server", "-p", "8080"]
